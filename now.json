@@ -1,7 +1,7 @@
 {
     "name": "charlie",	 
     "alias": "charliechee.now.sh",
-    "version": 1,
+    "version": 1.1,
     "builds": [
         { "src": "public/*", "use": "@now/static" },
         { "src": "screenshot.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } }
