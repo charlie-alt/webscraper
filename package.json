@@ -10,8 +10,8 @@
     "screenshot",
     "service"
   ],
-  "author": "styfle",
-  "repository": "github:styfle/screenshot-v2",
+  "author": "charlie-alt",
+  "repository": "github:charlie-alt/webscraper",
   "license": "MIT",
   "dependencies": {
     "chrome-aws-lambda": "1.11.1",
