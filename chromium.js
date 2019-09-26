@@ -7,11 +7,11 @@ async function getScreenshot(url, type, quality, fullPage) {
         executablePath: await chrome.executablePath,
         headless: chrome.headless,
     });
-
+    
     const page = await browser.newPage();
     
     if (url=="/furnishedhousing.com/locations/ma/boston") {
-        
+
           await page.goto(url);
           await page.setViewport({ width: 1680, height: 907 })
 
@@ -54,13 +54,13 @@ async function getScreenshot(url, type, quality, fullPage) {
           const file = await page.screenshot({ type,  quality, fullPage });
           await browser.close();
         
+          return file;
+        
     }
     
-    else {
-        await page.goto(url);
-        const file = await page.screenshot({ type,  quality, fullPage });
-        await browser.close();
-    }
+    await page.goto(url);
+    const file = await page.screenshot({ type,  quality, fullPage });
+    await browser.close();
     return file;
 }
 
