@@ -10,7 +10,9 @@ async function getScreenshot(url, type, quality, fullPage) {
 
     const page = await browser.newPage();
     
-    if (url=="https://www.furnishedhousing.com/locations/ma/boston") {
+    if (url=="/furnishedhousing.com/locations/ma/boston") {
+        
+          await page.goto(url);
           await page.setViewport({ width: 1680, height: 907 })
 
           await page.waitForSelector('.module > .wrapper > .container > .general')
